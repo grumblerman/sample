@@ -1,0 +1,11 @@
+{
+    "name": "sample",
+    "version": "1.0.0",
+    "description": "Cucumber tests integrated with WebdriverIO",
+    "main": "index.js",
+    "scripts": {},
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {},
+    "dependencies": {}
+}
