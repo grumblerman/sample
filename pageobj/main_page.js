@@ -2,6 +2,7 @@ import Page from './page';
 
 class MainPage extends Page {
 
+    // your specific page elements
     get searchBtn() {
         return $('.icon-search');
     }
@@ -21,6 +22,8 @@ class MainPage extends Page {
         return $('.main-logo');
     }
 
+
+    //your specific methods
     open(url) {
         super.open(url);
     }

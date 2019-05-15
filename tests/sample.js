@@ -27,5 +27,6 @@ describe('Testing main page', () => {
     it('should cahnge url after clicking on news title', () => {
         MainPage.article('3').click();
         assert.notEqual(browser.getUrl(), 'https://www.pravda.com.ua', "Url should not match!");
+        // add some more asserts if needed
     });
 });
