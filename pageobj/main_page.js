@@ -1,31 +1,46 @@
 import Page from './page';
 
-class LoginPage extends Page {
+class MainPage extends Page {
 
-    get username() {
-        return $('#username');
+    get searchBtn() {
+        return $('.icon-search');
     }
-    get password() {
-        return $('#password');
+    get languageBtn() {
+        return $('.options-text');
     }
-    get submitBtn() {
-        return $('form button[type="submit"]');
+    get topNewsSliderBnt() {
+        return $('div.top-news > div  button.slick-next');
     }
-    get flash() {
-        return $('#flash');
+    get searchInput() {
+        return $('.search-field');
     }
-    get headerLinks() {
-        return $$('#header a');
+    get searchResultsNumber() {
+        return $('.search-number');
+    }
+    get mainTitle() {
+        return $('.main-logo');
     }
 
-    open() {
-        super.open('login');
+    open(url) {
+        super.open(url);
     }
 
-    submit() {
-        this.submitBtn.click();
+    searchClick() {
+        this.searchBtn.click();
+    }
+
+    searchEnterValue(searchParam) {
+        this.searchInput.setValue(searchParam);
+    }
+
+    changeLanguage() {
+        this.languageBtn.click();
+    }
+
+    article(num) {
+        return $(`div.jspPane > div:nth-child(1) > div:nth-child(${num})`);
     }
 
 }
 
-export default new LoginPage();
+export default new MainPage();

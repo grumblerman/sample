@@ -23,7 +23,11 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        chromeOptions: {
+            args: ['-start-maximized']
+        }
+
     }],
     //
     // ===================
@@ -39,7 +43,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://the-internet.herokuapp.com',
+    baseUrl: 'https://www.pravda.com.ua',
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 150000,
