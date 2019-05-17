@@ -4,8 +4,9 @@ import {
     should
 } from 'chai';
 import MainPage from '../pageobj/main_page';
+import GraphsPage from '../pageobj/graphs_page';
 
-describe('Testing main page', () => {
+describe('Testing Main page', () => {
     it('should search selected value', () => {
         MainPage.open('');
         MainPage.searchClick();
@@ -27,6 +28,26 @@ describe('Testing main page', () => {
     it('should cahnge url after clicking on news title', () => {
         MainPage.article('3').click();
         assert.notEqual(browser.getUrl(), 'https://www.pravda.com.ua', "Url should not match!");
+        // add some more asserts if needed
+    });
+});
+
+describe('Testing Graphics page', () => {
+    it('page title shold match to given one', () => {
+        MainPage.open('graphs/');
+        // add some more asserts if needed
+    });
+
+    it('should chnage pagination and url', () => {
+        GraphsPage.open('graphs/');
+        GraphsPage.graphsPaginationClick('2');
+        expect(browser.getUrl()).to.have.string("page_3");
+        // add some more asserts if needed
+    });
+
+    it('page should got given amount of news', () => {
+        const newsGridTiles = GraphsPage.graphsArticleGrid.length;
+        assert.equal(newsGridTiles, "12", "News grid should have 12 tiles");
         // add some more asserts if needed
     });
 });
