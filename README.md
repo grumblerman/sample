@@ -3,7 +3,9 @@ JDK 1.8: Install JDK 1.8+ and make sure class path is set properly. JAVA is requ
 Node.JS: Install from the site take the LTS version based on your Operating system. Please make sure you install NodeJS globally.
 
 $ node --version
+
 $ npm --version
+
 Above command should print out the version that you have installed.
 
 # Quick start
