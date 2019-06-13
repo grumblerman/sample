@@ -71,8 +71,20 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: ['spec', 'dot', 'json', 'multiple-cucumber-html'],
+    reporterOptions: {
+        json: {
+            outputDir: './tests/reports/json-results/'
+        },
+        htmlReporter: {
+            jsonFolder: './tests/reports/htmlReporter-results/',
+            reportFolder: `./tests/reports/htmlReporter-results/`,
+            removeFolders: true,
+            openReportInBrowser: true,
+            // ... other options, see Options
+        }
 
+    },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

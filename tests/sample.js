@@ -13,7 +13,7 @@ describe('Testing Main page', () => {
         MainPage.searchEnterValue('Свинарчук');
         browser.keys('Enter');
         assert.notEqual(browser.getUrl(), 'https://www.pravda.com.ua', "Url should not match!");
-        assert.include(MainPage.searchResultsNumber.getText(), 'За вашим запитом знайдено', "!!");
+        assert.include(MainPage.searchResultsNumber.getText(), 'Some text to fail test', "Search results are invalid!");
         // add some more asserts if needed
     });
 
